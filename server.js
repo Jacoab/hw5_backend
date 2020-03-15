@@ -104,7 +104,7 @@ router.route('/movies')
             res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
         }
         else {
-            res.json({success: true, movie: movie});
+            res.json({success: true, movie: movie, msg: 'Movie retrieved from database'});
         }
     })
     .post(function(req, res){
@@ -115,7 +115,7 @@ router.route('/movies')
             actors: req.body.actors
         });
 
-        if (!movie) {
+        if (!newMovie) {
             res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
         }
         else {
@@ -123,7 +123,7 @@ router.route('/movies')
                 if (err) throw err;
             });
 
-            res.json({success: true});
+            res.json({success: true, msg: 'Movie added to database'});
         }
     })
     .delete(function(req, res){
@@ -139,7 +139,7 @@ router.route('/movies')
             res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
         }
         else {
-            res.json({success: true});
+            res.json({success: true, msg: 'Movie deleted from database'});
         }
     });
 
