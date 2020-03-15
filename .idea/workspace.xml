@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ee19f9-cc16-478b-9ef6-92d5d45bbb3c" name="Default" comment="Added GET, POST and DELETE operations to /movies endpoint">
+    <list default="true" id="d9ee19f9-cc16-478b-9ef6-92d5d45bbb3c" name="Default" comment="Fixed /movies POST operation and improved response messages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
@@ -84,7 +84,7 @@
       <workItem from="1583794096292" duration="343000" />
       <workItem from="1584210238170" duration="11859000" />
       <workItem from="1584233568603" duration="657000" />
-      <workItem from="1584302785657" duration="1062000" />
+      <workItem from="1584302785657" duration="3704000" />
     </task>
     <task id="LOCAL-00001" summary="Added connection error logging">
       <created>1584216929816</created>
@@ -100,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584233219943</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed /movies POST operation and improved response messages">
+      <created>1584303936546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584303936546</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,13 +116,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added connection error logging" />
     <MESSAGE value="Added GET, POST and DELETE operations to /movies endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added GET, POST and DELETE operations to /movies endpoint" />
+    <MESSAGE value="Fixed /movies POST operation and improved response messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed /movies POST operation and improved response messages" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="430" y="27" width="791" height="739" key="CommitChangelistDialog2" timestamp="1584303870063">
+    <state x="430" y="27" width="791" height="739" key="CommitChangelistDialog2" timestamp="1584311547905">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="430" y="27" width="791" height="739" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1584303870063" />
+    <state x="430" y="27" width="791" height="739" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1584311547905" />
     <state x="451" y="139" width="453" height="514" key="FileChooserDialogImpl" timestamp="1584212917534">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -140,10 +148,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1341" height="196" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1584233308368" />
-    <state x="278" y="133" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1584233232175">
+    <state x="278" y="133" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1584303944356">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="133" width="800" height="527" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1584233232175" />
+    <state x="278" y="133" width="800" height="527" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1584303944356" />
     <state x="448" y="315" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584233165940">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

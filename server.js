@@ -126,6 +126,27 @@ router.route('/movies')
             res.json({success: true, msg: 'Movie added to database'});
         }
     })
+    .put(function(req, res){
+        var reqMovie = {title: req.body.title,
+            year: req.body.year,
+            genre: req.body.genre,
+            actors: req.body.actors};
+        var updatedMovie = {title: req.body.newTitle,
+            year: req.body.newYear,
+            genre: req.body.newGenre,
+            actors: req.body.newActors};
+
+        var movie = Move.findOneAndUpdate(reqMovie, updatedMovie, function(err){
+            if (err) throw err;
+        });
+
+        if (!movie) {
+            res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
+        }
+        else {
+            res.json({success: true, msg: 'Movie updated database'});
+        }
+    })
     .delete(function(req, res){
         var movie = Movie.find({title: req.body.title}, function(err, user){
             if (err) throw err;
