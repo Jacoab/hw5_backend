@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ee19f9-cc16-478b-9ef6-92d5d45bbb3c" name="Default" comment="">
+    <list default="true" id="d9ee19f9-cc16-478b-9ef6-92d5d45bbb3c" name="Default" comment="Added connection error logging">
+      <change afterPath="$PROJECT_DIR$/movie.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/Users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,14 +84,30 @@
       <workItem from="1551740823482" duration="6733000" />
       <workItem from="1583366095004" duration="2101000" />
       <workItem from="1583794096292" duration="343000" />
-      <workItem from="1584210238170" duration="5935000" />
+      <workItem from="1584210238170" duration="11629000" />
     </task>
+    <task id="LOCAL-00001" summary="Added connection error logging">
+      <created>1584216929816</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584216929817</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added connection error logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added connection error logging" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="29" width="791" height="739" key="CommitChangelistDialog2" timestamp="1584216929167">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="413" y="29" width="791" height="739" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1584216929167" />
     <state x="451" y="139" width="453" height="514" key="FileChooserDialogImpl" timestamp="1584212917534">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -100,21 +116,29 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="535" y="291" key="Github.ShareDialog/0.27.1366.741@0.27.1366.741" timestamp="1584213026589" />
-    <state width="1341" height="196" key="GridCell.Tab.0.bottom" timestamp="1584216863749">
+    <state width="1341" height="196" key="GridCell.Tab.0.bottom" timestamp="1584229575045">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1341" height="196" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1584216863749" />
-    <state width="1341" height="196" key="GridCell.Tab.0.center" timestamp="1584216863749">
+    <state width="1341" height="196" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1584229575045" />
+    <state width="1341" height="196" key="GridCell.Tab.0.center" timestamp="1584229575045">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1341" height="196" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1584216863749" />
-    <state width="1341" height="196" key="GridCell.Tab.0.left" timestamp="1584216863748">
+    <state width="1341" height="196" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1584229575045" />
+    <state width="1341" height="196" key="GridCell.Tab.0.left" timestamp="1584229575044">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1341" height="196" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1584216863748" />
-    <state width="1341" height="196" key="GridCell.Tab.0.right" timestamp="1584216863749">
+    <state width="1341" height="196" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1584229575044" />
+    <state width="1341" height="196" key="GridCell.Tab.0.right" timestamp="1584229575045">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1341" height="196" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1584216863749" />
+    <state width="1341" height="196" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1584229575045" />
+    <state x="278" y="133" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1584216933888">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="278" y="133" width="800" height="527" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1584216933888" />
+    <state x="448" y="315" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584233165940">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="448" y="315" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1584233165940" />
   </component>
 </project>

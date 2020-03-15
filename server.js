@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var authJwtController = require('./auth_jwt');
 var User = require('./Users');
+var Movie = require('./movie');
 var jwt = require('jsonwebtoken');
 
 var app = express();
@@ -94,6 +95,53 @@ router.post('/signin', function(req, res) {
 
     });
 });
+
+router.route('/movies')
+    .get(function(req, res){
+        var movie = Movie.find({title: req.body.title});
+
+        if (!movie) {
+            res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
+        }
+        else {
+            res.json({success: true, movie: movie});
+        }
+    })
+    .post(function(req, res){
+        var newMovie = Movie({
+            title: req.body.title,
+            year: req.body.year,
+            genre: req.body.genre,
+            actors: req.body.actors
+        });
+
+        if (!movie) {
+            res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
+        }
+        else {
+            newMovie.save(function(err) {
+                if (err) throw err;
+            });
+
+            res.json({success: true});
+        }
+    })
+    .delete(function(req, res){
+        var movie = Movie.find({title: req.body.title}, function(err, user){
+            if (err) throw err;
+
+            user.remove(function(err) {
+                console.log('User successfully deleted');
+            })
+        });
+
+        if (!movie) {
+            res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
+        }
+        else {
+            res.json({success: true});
+        }
+    });
 
 app.use('/', router);
 app.listen(process.env.PORT || 8080);

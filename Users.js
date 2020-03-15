@@ -7,7 +7,7 @@ mongoose.Promise = global.Promise;
 
 mongoose.connect(process.env.DB_USER, { useNewUrlParser: true } );
 mongoose.connection.once('open', function(){
-    console.log('Conection has been made!');
+    console.log('User conection has been made!');
 }).on('error', function(error){
     console.log('Error is: ', error);
 });
