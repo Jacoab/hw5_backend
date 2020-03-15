@@ -107,7 +107,7 @@ router.route('/movies')
             res.json({success: true, movie: movie, msg: 'Movie retrieved from database'});
         }
     })
-    .post(function(req, res){
+    .post(authJwtController.isAuthenticated, function(req, res){
         var newMovie = Movie({
             title: req.body.title,
             year: req.body.year,
@@ -126,7 +126,7 @@ router.route('/movies')
             res.json({success: true, msg: 'Movie added to database'});
         }
     })
-    .put(function(req, res){
+    .put(authJwtController.isAuthenticated, function(req, res){
         var reqMovie = {title: req.body.title,
             year: req.body.year,
             genre: req.body.genre,
@@ -147,7 +147,7 @@ router.route('/movies')
             res.json({success: true, msg: 'Movie updated database'});
         }
     })
-    .delete(function(req, res){
+    .delete(authJwtController.isAuthenticated, function(req, res){
         var movie = Movie.find({title: req.body.title}, function(err, user){
             if (err) throw err;
 
