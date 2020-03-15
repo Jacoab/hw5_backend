@@ -136,7 +136,7 @@ router.route('/movies')
             genre: req.body.newGenre,
             actors: req.body.newActors};
 
-        var movie = Move.findOneAndUpdate(reqMovie, updatedMovie, function(err){
+        var movie = Movie.findOneAndUpdate(reqMovie, updatedMovie, function(err){
             if (err) throw err;
         });
 
