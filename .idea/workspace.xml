@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ee19f9-cc16-478b-9ef6-92d5d45bbb3c" name="Default" comment="Fixed PUT operation on /movies endpoint">
+    <list default="true" id="d9ee19f9-cc16-478b-9ef6-92d5d45bbb3c" name="Default" comment="Added JWT authentication on /movie endpoints">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
@@ -84,7 +84,7 @@
       <workItem from="1583794096292" duration="343000" />
       <workItem from="1584210238170" duration="11859000" />
       <workItem from="1584233568603" duration="657000" />
-      <workItem from="1584302785657" duration="7565000" />
+      <workItem from="1584302785657" duration="9713000" />
     </task>
     <task id="LOCAL-00001" summary="Added connection error logging">
       <created>1584216929816</created>
@@ -121,7 +121,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584314448770</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added JWT authentication on /movie endpoints">
+      <created>1584315557550</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584315557550</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added JWT authentication on /movie endpoints">
+      <created>1584315595253</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584315595253</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,13 +147,14 @@
     <MESSAGE value="Fixed /movies POST operation and improved response messages" />
     <MESSAGE value="Added PUT operation to /movies endpoint" />
     <MESSAGE value="Fixed PUT operation on /movies endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed PUT operation on /movies endpoint" />
+    <MESSAGE value="Added JWT authentication on /movie endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added JWT authentication on /movie endpoints" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="430" y="27" width="791" height="739" key="CommitChangelistDialog2" timestamp="1584315556794">
+    <state x="430" y="27" width="791" height="739" key="CommitChangelistDialog2" timestamp="1584315595160">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="430" y="27" width="791" height="739" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1584315556794" />
+    <state x="430" y="27" width="791" height="739" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1584315595160" />
     <state x="451" y="139" width="453" height="514" key="FileChooserDialogImpl" timestamp="1584212917534">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -164,10 +179,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1341" height="196" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1584315515108" />
-    <state x="278" y="133" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1584315568057">
+    <state x="278" y="133" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1584315598088">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="133" width="800" height="527" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1584315568057" />
+    <state x="278" y="133" width="800" height="527" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1584315598088" />
     <state x="448" y="315" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584233165940">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

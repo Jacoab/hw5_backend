@@ -98,7 +98,9 @@ router.post('/signin', function(req, res) {
 
 router.route('/movies')
     .get(function(req, res){
-        var movie = Movie.find({title: req.body.title});
+        var movie = Movie.find({title: req.body.title}, function(err){
+            if (err) throw err;
+        });
 
         if (!movie) {
             res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
@@ -152,7 +154,7 @@ router.route('/movies')
             if (err) throw err;
 
             user.remove(function(err) {
-                console.log('User successfully deleted');
+                if (err) throw err;
             })
         });
 
