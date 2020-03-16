@@ -97,7 +97,7 @@ router.post('/signin', function(req, res) {
 });
 
 router.route('/movies')
-    .get(function(req, res){
+    .get(authJwtController.isAuthenticated, function(req, res){
         var movie = Movie.find({title: req.body.title}, function(err){
             if (err) throw err;
         });
@@ -106,7 +106,7 @@ router.route('/movies')
             res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
         }
         else {
-            res.json({success: true, movie: movie, msg: 'Movie retrieved from database'});
+            res.json({success: true, msg: 'Movie retrieved from database'});
         }
     })
     .post(authJwtController.isAuthenticated, function(req, res){

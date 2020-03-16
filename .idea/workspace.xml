@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ee19f9-cc16-478b-9ef6-92d5d45bbb3c" name="Default" comment="Added JWT authentication on /movie endpoints">
+    <list default="true" id="d9ee19f9-cc16-478b-9ef6-92d5d45bbb3c" name="Default" comment="Fixed GET operation for /movies endpoint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
@@ -84,7 +84,7 @@
       <workItem from="1583794096292" duration="343000" />
       <workItem from="1584210238170" duration="11859000" />
       <workItem from="1584233568603" duration="657000" />
-      <workItem from="1584302785657" duration="9713000" />
+      <workItem from="1584302785657" duration="10787000" />
     </task>
     <task id="LOCAL-00001" summary="Added connection error logging">
       <created>1584216929816</created>
@@ -135,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584315595253</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed GET operation for /movies endpoint">
+      <created>1584322677088</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1584322677088</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,13 +155,15 @@
     <MESSAGE value="Added PUT operation to /movies endpoint" />
     <MESSAGE value="Fixed PUT operation on /movies endpoint" />
     <MESSAGE value="Added JWT authentication on /movie endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added JWT authentication on /movie endpoints" />
+    <MESSAGE value="Fixed GET operation for /movies endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed GET operation for /movies endpoint" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="430" y="27" width="791" height="739" key="CommitChangelistDialog2" timestamp="1584315595160">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="1366" y="27" width="791" height="739" key="CommitChangelistDialog2" timestamp="1584322676488">
+      <screen x="0" y="27" width="3286" height="1053" />
     </state>
     <state x="430" y="27" width="791" height="739" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1584315595160" />
+    <state x="1366" y="27" key="CommitChangelistDialog2/0.27.3286.1053@0.27.3286.1053" timestamp="1584322676488" />
     <state x="451" y="139" width="453" height="514" key="FileChooserDialogImpl" timestamp="1584212917534">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -163,26 +172,31 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="535" y="291" key="Github.ShareDialog/0.27.1366.741@0.27.1366.741" timestamp="1584213026589" />
-    <state width="1341" height="196" key="GridCell.Tab.0.bottom" timestamp="1584315515108">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1895" height="196" key="GridCell.Tab.0.bottom" timestamp="1584323544497">
+      <screen x="0" y="27" width="3286" height="1053" />
     </state>
     <state width="1341" height="196" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1584315515108" />
-    <state width="1341" height="196" key="GridCell.Tab.0.center" timestamp="1584315515108">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1895" height="196" key="GridCell.Tab.0.bottom/0.27.3286.1053@0.27.3286.1053" timestamp="1584323544497" />
+    <state width="1895" height="196" key="GridCell.Tab.0.center" timestamp="1584323544495">
+      <screen x="0" y="27" width="3286" height="1053" />
     </state>
     <state width="1341" height="196" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1584315515108" />
-    <state width="1341" height="196" key="GridCell.Tab.0.left" timestamp="1584315515107">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1895" height="196" key="GridCell.Tab.0.center/0.27.3286.1053@0.27.3286.1053" timestamp="1584323544495" />
+    <state width="1895" height="196" key="GridCell.Tab.0.left" timestamp="1584323544494">
+      <screen x="0" y="27" width="3286" height="1053" />
     </state>
     <state width="1341" height="196" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1584315515107" />
-    <state width="1341" height="196" key="GridCell.Tab.0.right" timestamp="1584315515108">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1895" height="196" key="GridCell.Tab.0.left/0.27.3286.1053@0.27.3286.1053" timestamp="1584323544494" />
+    <state width="1895" height="196" key="GridCell.Tab.0.right" timestamp="1584323544496">
+      <screen x="0" y="27" width="3286" height="1053" />
     </state>
     <state width="1341" height="196" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1584315515108" />
-    <state x="278" y="133" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1584315598088">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1895" height="196" key="GridCell.Tab.0.right/0.27.3286.1053@0.27.3286.1053" timestamp="1584323544496" />
+    <state x="1366" y="178" width="1920" height="749" key="Vcs.Push.Dialog.v2" timestamp="1584322679645">
+      <screen x="0" y="27" width="3286" height="1053" />
     </state>
     <state x="278" y="133" width="800" height="527" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1584315598088" />
+    <state x="1366" y="178" width="1920" height="749" key="Vcs.Push.Dialog.v2/0.27.3286.1053@0.27.3286.1053" timestamp="1584322679645" />
     <state x="448" y="315" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584233165940">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
