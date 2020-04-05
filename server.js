@@ -99,9 +99,9 @@ router.post('/signin', function(req, res) {
 
 router.route('/movies')
     .get(authJwtController.isAuthenticated, function(req, res){
-        var movie = Movie.find.lean({title: req.body.title}, function(err){
+        var movie = Movie.find({title: req.body.title}, function(err){
             if (err) throw err;
-        });
+        }).lean();
 
 
         if (!movie) {
@@ -110,9 +110,9 @@ router.route('/movies')
         else {
 
             if(req.query.review === true) {
-                var review = Review.find.lean({title: req.body.title}, function(err){
+                var review = Review.find({title: req.body.title}, function(err){
                     if (err) throw err;
-                });
+                }).lean();
 
                 res.json({success: true, movie: movie, review: review, msg: 'Movie retrieved from database'});
             }
