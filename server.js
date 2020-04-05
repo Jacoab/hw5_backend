@@ -4,6 +4,7 @@ var passport = require('passport');
 var authJwtController = require('./auth_jwt');
 var User = require('./Users');
 var Movie = require('./movie');
+var Review = require('./review');
 var jwt = require('jsonwebtoken');
 
 var app = express();
@@ -106,7 +107,16 @@ router.route('/movies')
             res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
         }
         else {
-            res.json({success: true, msg: 'Movie retrieved from database'});
+            if(req.query.review === true) {
+                var review = Review.find({title: req.body.title}, function(err){
+                    if (err) throw err;
+                });
+
+                res.json({success: true, movie: movie, review: review, msg: 'Movie retrieved from database'})
+            }
+            else{
+                res.json({success: true, movie: movie, msg: 'Movie retrieved from database'});
+            }
         }
     })
     .post(authJwtController.isAuthenticated, function(req, res){
@@ -121,6 +131,21 @@ router.route('/movies')
             res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
         }
         else {
+            var newReview;
+
+            if(req.query.review === true) {
+                newReview = Review({
+                    title: req.body.title,
+                    username: req.body.username,
+                    quote: req.body.quote,
+                    rating: req.body.rating
+                });
+
+                newReview.save(function(err) {
+                    if (err) throw err;
+                });
+            }
+
             newMovie.save(function(err) {
                 if (err) throw err;
             });
@@ -165,6 +190,8 @@ router.route('/movies')
             res.json({success: true, msg: 'Movie deleted from database'});
         }
     });
+
+router.route('/');
 
 app.use('/', router);
 app.listen(process.env.PORT || 8080);
