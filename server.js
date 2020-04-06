@@ -135,18 +135,16 @@ router.route('/movies')
             res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
         }
         else {
-            if(req.query.review === true) {
-                var newReview = Review({
-                    title: req.body.title,
-                    username: req.body.username,
-                    quote: req.body.quote,
-                    rating: req.body.rating
-                });
+            var newReview = Review({
+                title: req.body.title,
+                username: req.body.username,
+                quote: req.body.quote,
+                rating: req.body.rating
+            });
 
-                newReview.save(function(err) {
-                    if (err) throw err;
-                });
-            }
+            newReview.save(function(err) {
+                if (err) throw err;
+            });
 
             newMovie.save(function(err) {
                 if (err) throw err;
@@ -177,12 +175,8 @@ router.route('/movies')
         }
     })
     .delete(authJwtController.isAuthenticated, function(req, res){
-        var movie = Movie.find({title: req.body.title}, function(err, user){
+        var movie = Movie.deleteOne({title: req.body.title}, function(err){
             if (err) throw err;
-
-            user.remove(function(err) {
-                if (err) throw err;
-            });
         });
 
         if (!movie) {
