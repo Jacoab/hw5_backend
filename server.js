@@ -99,26 +99,28 @@ router.post('/signin', function(req, res) {
 
 router.route('/movies')
     .get(authJwtController.isAuthenticated, function(req, res){
-        var movie = Movie.find({title: req.body.title}, function(err){
+        var movie = Movie.find({title: req.body.title}, function(err, movie) {
             if (err) throw err;
-        }).lean();
 
+            if(req.query.review === true) {
+                var review = Review.find({title: req.body.title}, function (err, review) {
+                    if (err) throw err;
+
+                    res.json({success: true, movie: movie, review: review,
+                                msg: 'Movie and review retrieved from database'});
+                });
+
+                if (!review) {
+                    res.status(401).send({success: false, msg: 'Review does not exist in the database'});
+                }
+            }
+            else {
+                res.json({success: true, movie: movie, msg: 'Movie and review retrieved from database'});
+            }
+        });
 
         if (!movie) {
             res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
-        }
-        else {
-
-            if(req.query.review === true) {
-                var review = Review.find({title: req.body.title}, function(err){
-                    if (err) throw err;
-                }).lean();
-
-                res.json({success: true, movie: movie, review: review, msg: 'Movie retrieved from database'});
-            }
-            else{
-                res.json({success: true, movie: movie, msg: 'Movie retrieved from database'});
-            }
         }
     })
     .post(authJwtController.isAuthenticated, function(req, res){

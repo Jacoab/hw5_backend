@@ -16,7 +16,7 @@ var MovieSchema = new Schema({
     title: String,
     year: String,
     genre: String,
-    actors: [{actorName: String, characterName: String}]
+    actors: [{actorName: String, characterName: String}],
 });
 
 // return the model
