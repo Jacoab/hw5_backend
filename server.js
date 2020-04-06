@@ -182,7 +182,7 @@ router.route('/movies')
 
             user.remove(function(err) {
                 if (err) throw err;
-            })
+            });
         });
 
         if (!movie) {
