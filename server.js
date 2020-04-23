@@ -7,6 +7,11 @@ var Movie = require('./movie');
 var Review = require('./review');
 var jwt = require('jsonwebtoken');
 
+// Reset database data
+User.deleteMany(function(err){if (err) throw err;});
+Movie.deleteMany(function(err){if (err) throw err;});
+Review.deleteMany(function(err){if (err) throw err;});
+
 var app = express();
 module.exports = app; // for testing
 app.use(bodyParser.json());
@@ -99,23 +104,28 @@ router.post('/signin', function(req, res) {
 
 router.route('/movies')
     .get(authJwtController.isAuthenticated, function(req, res){
-        var movie = Movie.find({title: req.body.title}, function(err, movie) {
+        var searchParams = {};
+        if (req.body.title !== '') {
+            searchParams = {title: req.body.title}
+        }
+
+        var movie = Movie.find(searchParams, function(err, movie) {
             if (err) throw err;
 
-            if(req.query.review === true) {
-                var review = Review.find({title: req.body.title}, function (err, review) {
+            if(req.query.review) {
+                var reviews = Review.find({title: req.body.title}, function (err, reviews) {
                     if (err) throw err;
 
-                    res.json({success: true, movie: movie, review: review,
+                    res.json({success: true, movie: movie, reviews: reviews,
                                 msg: 'Movie and review retrieved from database'});
                 });
 
-                if (!review) {
+                if (!reviews) {
                     res.status(401).send({success: false, msg: 'Review does not exist in the database'});
                 }
             }
             else {
-                res.json({success: true, movie: movie, msg: 'Movie and review retrieved from database'});
+                res.json({success: true, movie: movie, msg: 'Movie retrieved from database'});
             }
         });
 
@@ -124,29 +134,37 @@ router.route('/movies')
         }
     })
     .post(authJwtController.isAuthenticated, function(req, res){
+        console.log(req.query.review);
+
         var newMovie = Movie({
             title: req.body.title,
             year: req.body.year,
             genre: req.body.genre,
-            actors: req.body.actors
+            actors: req.body.actors,
+            imageURL: req.body.imageURL
         });
 
         if (!newMovie) {
             res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
         }
         else {
-            var newReview = Review({
-                title: req.body.title,
-                username: req.body.username,
-                quote: req.body.quote,
-                rating: req.body.rating
-            });
 
-            newReview.save(function(err) {
-                if (err) throw err;
-            });
+            if(req.query.review) {
+                var newReview = Review({
+                    title: req.body.title,
+                    username: req.body.username,
+                    quote: req.body.quote,
+                    rating: req.body.rating
+                });
 
-            newMovie.save(function(err) {
+                newReview.save(function(err) {
+                    if (err) throw err;
+                });
+
+                console.log('Review added with movie');
+            }
+
+            newMovie.save(function(err){
                 if (err) throw err;
             });
 
