@@ -172,24 +172,49 @@ router.route('/movies')
         }
     })
     .put(authJwtController.isAuthenticated, function(req, res){
-        var reqMovie = {title: req.body.title,
-            year: req.body.year,
-            genre: req.body.genre,
-            actors: req.body.actors};
-        var updatedMovie = {title: req.body.newTitle,
-            year: req.body.newYear,
-            genre: req.body.newGenre,
-            actors: req.body.newActors};
 
-        var movie = Movie.findOneAndUpdate(reqMovie, updatedMovie, function(err){
-            if (err) throw err;
-        });
+        if(req.query.review) {
+            var newReview = new Review({
+                title: req.body.title,
+                username: req.body.username,
+                quote: req.body.quote,
+                rating: req.body.rating
+            });
 
-        if (!movie) {
-            res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
+            newReview.save(function(err) {
+                if (err) throw err;
+            });
+
+            if(!newReview) {
+                res.json({success: false, msg: 'Invalid body params'});
+            }
+            else {
+                res.json({success: true, msg: 'New review added to movie'});
+            }
         }
         else {
-            res.json({success: true, msg: 'Movie updated database'});
+            var reqMovie = {
+                title: req.body.title,
+                year: req.body.year,
+                genre: req.body.genre,
+                actors: req.body.actors
+            };
+            var updatedMovie = {
+                title: req.body.newTitle,
+                year: req.body.newYear,
+                genre: req.body.newGenre,
+                actors: req.body.newActors
+            };
+
+            var movie = Movie.findOneAndUpdate(reqMovie, updatedMovie, function (err) {
+                if (err) throw err;
+            });
+
+            if (!movie) {
+                res.status(401).send({success: false, msg: 'Movie does not exist in the database'});
+            } else {
+                res.json({success: true, msg: 'Movie updated database'});
+            }
         }
     })
     .delete(authJwtController.isAuthenticated, function(req, res){

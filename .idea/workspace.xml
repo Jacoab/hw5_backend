@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ee19f9-cc16-478b-9ef6-92d5d45bbb3c" name="Default" comment="Added query parameter checking">
-      <change afterPath="$PROJECT_DIR$/Image.js" afterDir="false" />
+    <list default="true" id="d9ee19f9-cc16-478b-9ef6-92d5d45bbb3c" name="Default" comment="Added sending multiple reviews">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/movie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="week7a" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -100,7 +99,8 @@
       <workItem from="1586213775045" duration="102000" />
       <workItem from="1587324203162" duration="13853000" />
       <workItem from="1587345667939" duration="4887000" />
-      <workItem from="1587670780713" duration="4479000" />
+      <workItem from="1587670780713" duration="5900000" />
+      <workItem from="1587759432841" duration="2423000" />
     </task>
     <task id="LOCAL-00001" summary="Added connection error logging">
       <created>1584216929816</created>
@@ -228,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586151371685</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added sending multiple reviews">
+      <created>1587685274066</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1587685274066</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,13 +265,14 @@
     <MESSAGE value="Added movie and review information in response" />
     <MESSAGE value="Fixed semicolon" />
     <MESSAGE value="Added query parameter checking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added query parameter checking" />
+    <MESSAGE value="Added sending multiple reviews" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sending multiple reviews" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="430" y="27" width="1107" height="741" key="CommitChangelistDialog2" timestamp="1587685240743">
+    <state x="430" y="27" width="1107" height="741" key="CommitChangelistDialog2" timestamp="1587762126825">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="430" y="27" width="791" height="739" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1587685240743" />
+    <state x="430" y="27" width="791" height="739" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1587762126825" />
     <state x="1366" y="27" width="791" height="916" key="CommitChangelistDialog2/0.27.3286.1053@0.27.3286.1053" timestamp="1584323799202" />
     <state x="259" y="27" width="1107" height="741" key="CommitChangelistDialog2/1366.0.1920.1080/0.27.1366.741@0.27.1366.741" timestamp="1586126892459" />
     <state x="2164" y="27" width="1107" height="940" key="CommitChangelistDialog2/1366.0.1920.1080/0.27.1366.741@1366.0.1920.1080" timestamp="1586151354737" />
